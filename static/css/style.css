@@ -1,0 +1,153 @@
+/* ================================
+   RESET BÁSICO
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f5f5f5;
+}
+
+
+/* ================================
+   VARIABLES
+================================ */
+
+:root {
+    --azul: #1565c0;
+    --azul-claro: #eaf3ff;
+    --gris: #666;
+    --gris-claro: #eeeeee;
+    --blanco: #ffffff;
+    --negro: #222;
+}
+
+
+/* ================================
+   ELEMENTOS GENERALES
+================================ */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    width: 100%;
+    padding: 18px 5%;
+
+    background-color: var(--blanco);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    color: var(--azul);
+
+    flex-grow: 1;
+}
+
+.logo-icon {
+    font-size: 1.7rem;
+}
+
+
+/* NAV */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    flex-grow: 1;
+}
+
+.nav a {
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.nav a:hover {
+    color: var(--azul);
+}
+
+
+/* BUSCADOR */
+
+.buscador {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-grow: 1;
+}
+
+.buscador input {
+    width: 100%;
+    min-width: 160px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.buscador button {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: var(--azul);
+    color: white;
+
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    opacity: 0.9;
+}
+

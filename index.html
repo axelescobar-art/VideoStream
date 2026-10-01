@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>Document</title>
 </head>
 
 <body>
- <header class="navbar">
-        <div class="logo-container">
-             <img class="imagen" src="static/images/5295-youtube-i_102568.png" alt="mirage">
-            <div class="texto-logo">
-                <h1 class="logo-titulo">Biblioteca Stream</h1>
-            </div>
+<header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">✈</span>
+            <span>Video Stream</span>
         </div>
 
-        <div class="actions-container">
-            <input type="text" placeholder="Email" class="search-input">
-            <button class="btn-login" id="btn-ingresar">Ingresar</button>
+        <nav class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#destinos">Destinos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-            <div class="contador-libros">
-                <span style="font-size: 1.8rem;">📚</span>
-                <div class="texto-contador">
-                    <p>Libros</p>
-                    <p>seleccionados: <strong id="numero-contador">0</strong></p>
-                </div>
-            </div>
+        <div class="buscador">
+            <input
+                type="text"
+                id="buscarDestino"
+                placeholder="Buscar destino..."
+            >
+
+            <button id="btnBuscar">
+                Buscar
+            </button>
         </div>
+
     </header>
  
 </body>
