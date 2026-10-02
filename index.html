@@ -1,64 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Axel Escobar">
+    <title>Biblioteca Horizonte</title>
     <link rel="stylesheet" href="static/css/style.css">
-    <title>Document</title>
 </head>
 
 <body>
-<header class="header">
-
-        <div class="logo">
-            <span class="logo-icon">✈</span>
-            <span>Video Stream</span>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="static/images/5295-youtube-i_102568.png" style="height: 100px; width: 100px;">
+            <div class="texto-logo">
+                <h1 class="logo-titulo">Video</h1> 
+                <h1 class="rojo-titulo">Stream</h1>
+            </div>
         </div>
 
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#destinos">Destinos</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+        <div class="actions-container">
+            <input type="text" placeholder="Email" class="search-input">
+            <button class="btn-login" id="btn-ingresar">Ingresar</button>
 
-        <div class="buscador">
-            <input
-                type="text"
-                id="buscarDestino"
-                placeholder="Buscar destino..."
-            >
-
-            <button id="btnBuscar">
-                Buscar
-            </button>
+            <div class="contador-libros">
+                <span style="font-size: 1.8rem;">📚</span>
+                <div class="texto-contador">
+                    <p>Libros</p>
+                    <p>seleccionados: <strong id="numero-contador">0</strong></p>
+                </div>
+            </div>
         </div>
-
     </header>
-    <section class="seccion-principal">
+
+    <main class="contenedor">
+
+        <section class="seccion-principal">
 
             <!-- Columna Izquierda (Banner y Video) -->
-            <div class="contenedor_2">
-                <div class="texto-banner">
-                    <h2>Descubre nuevas historias</h2>
-                    <div class="linea-decorativa"></div>
-                    <p>Explora nuestra biblioteca virtual y encuentra libros para todos los gustos. Conocimiento,
-                        aventura y mucho más al alcance de un clic.</p>
-                </div>
-
+                <!--Tarjeta de video-->
                 <div class="tarjeta-video">
                     <div class="contenedor-video">
                         <video id="video-principal" controls preload="auto" poster="static/images/divinacomedia.png"
                             style="width: 100%; aspect-ratio: 4/3; object-fit: cover;">
                             <source src="static/videos/videoxd.mp4" type="video/mp4">
                         </video>
-                        <p class="leyenda-video">Conoce la Biblioteca Horizonte</p>
+                        <p class="leyenda-video">Lagos y montañas</p>
                     </div>
                 </div>
-            </div> <!-- Cierre CORRECTO de contenedor_2 -->
+            </section>
 
-            <!-- Columna Derecha (Recomendados - AFUERA de contenedor_2) -->
-            <aside class="recomendados">
+            <!-- Columna derecha de lista de reproduccion-->
+             <section>
+            <section class="recomendados">
+                <h3>Siguiente en la cola</h3>
+
+                <div class="tarjeta-recomendado">
+                    <img src="static/images/images (10).png" alt="Cien años de soledad">
+                    <div class="info-libro">
+                        <h4>Cien años de soledad</h4>
+                        <p class="autor">Gabriel García Márquez</p>
+                        <a href="#">Ver más...</a>
+                    </div>
+                    <button class="btn-sumar">+</button>
+                </div>
+
+                <div class="tarjeta-recomendado">
+                    <img src="static/images/images (9).png" alt="Sapiens">
+                    <div class="info-libro">
+                        <h4>Sapiens</h4>
+                        <p class="autor">Yuval Noah Harari</p>
+                        <a href="#">Ver más...</a>
+                    </div>
+                    <button class="btn-sumar">+</button>
+                </div>
+
+                <div class="tarjeta-recomendado">
+                    <img src="static/images/images (11).png" alt="El principito">
+                    <div class="info-libro">
+                        <h4>El principito</h4>
+                        <p class="autor">Antoine de Saint-Exupéry</p>
+                        <a href="#">Ver más...</a>
+                    </div>
+                    <button class="btn-sumar">+</button>
+                </div>
+            </section>
+
+            <!-- Columna izquierda de recomendados-->
+            <section>
                 <h3>Libros recomendados:</h3>
 
                 <div class="tarjeta-recomendado">
@@ -90,10 +119,16 @@
                     </div>
                     <button class="btn-sumar">+</button>
                 </div>
-            </aside>
-
+            </section>
         </section> <!-- Cierre de seccion-principal -->
     </main>
- 
+
+    <!--Seccion por debajo de todo-->
+    <footer>
+
+        </footer>
+
+    <script src="static/js/script.js"></script>
 </body>
+
 </html>

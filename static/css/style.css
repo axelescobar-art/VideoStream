@@ -1,153 +1,309 @@
-/* ================================
-   RESET BÁSICO
-================================ */
-
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background: #f5f5f5;
+    background-color: #ffffff;
+    margin: 0;
 }
 
-
-/* ================================
-   VARIABLES
-================================ */
-
-:root {
-    --azul: #1565c0;
-    --azul-claro: #eaf3ff;
-    --gris: #666;
-    --gris-claro: #eeeeee;
-    --blanco: #ffffff;
-    --negro: #222;
-}
-
-
-/* ================================
-   ELEMENTOS GENERALES
-================================ */
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button,
-input {
-    font: inherit;
-}
-
-
-/* ================================
-   HEADER
-================================ */
-
-.header {
-    width: 100%;
-    padding: 18px 5%;
-
-    background-color: var(--blanco);
-
+.navbar {
+    background-color: #ffffff;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-
-    gap: 20px;
-
-    border-bottom: 1px solid #ddd;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    /* Misma anchura que las categorías y el banner */
+    margin: 0 auto;
+    /* Centra la barra superior */
 }
 
-
-/* LOGO */
-
-.logo {
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+}
 
-    font-size: 1.5rem;
+.texto-logo {
+    display: flex;
+    line-height: 1;
+}
+
+.logo-titulo {
+    font-size: 1.1rem;
+    color: #000000;
     font-weight: bold;
-
-    color: var(--azul);
-
-    flex-grow: 1;
+    margin: 0;
 }
 
-.logo-icon {
-    font-size: 1.7rem;
+.rojo-titulo {
+    color: red;
+    font-weight: 100px;
 }
 
-
-/* NAV */
-
-.nav {
+.actions-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 20px;
-
-    flex-grow: 1;
+    gap: 15px;
+    /* Separa el input, el botón ingresar y el contador */
 }
 
-.nav a {
-    color: #333;
-    font-size: 0.95rem;
+.search-input {
+    padding: 6px 10px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    width: 200px;
+    outline: none;
 }
 
-.nav a:hover {
-    color: var(--azul);
-}
-
-
-/* BUSCADOR */
-
-.buscador {
-    display: flex;
-    align-items: center;
-
-    gap: 8px;
-
-    flex-grow: 1;
-}
-
-.buscador input {
-    width: 100%;
-    min-width: 160px;
-
-    padding: 10px 12px;
-
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-.buscador button {
-    padding: 10px 15px;
-
+.btn-login {
+    background-color: #1a4a72;
+    color: #ffffff;
     border: none;
-    border-radius: 6px;
-
-    background-color: var(--azul);
-    color: white;
-
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.buscador button:hover {
-    opacity: 0.9;
+.contador-libros {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.texto-contador p {
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Extensión de la barra azul de categorías */
+.contenedor_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D2DCE7;
+    padding: 15px;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 20px auto 30px auto;
+    border-radius: 2px;
+}
+
+.seccion-principal {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    /* Se cambia de 900px a 1200px */
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
+.contenedor_2 {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cccccc;
+    padding: 30px;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+.texto-banner {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.texto-banner h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.texto-banner p {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.texto-banner p span {
+    font-weight: bold;
+    color: #e47b1f;
+}
+
+.imagen-papu {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #000;
+    background-color: #fff;
+}
+
+.recomendados {
+    flex: 1;
+}
+
+.recomendados h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-recomendado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    /* Borde gris claro continuo como el wireframe */
+    background-color: #ffffff;
+}
+
+.tarjeta-recomendado img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border: 1px solid #000000;
+}
+
+/* Agrupa título, autor y enlace en columna */
+.info-libro {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.info-libro h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.info-libro .autor {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666666;
+    /* Gris para el autor */
+}
+
+.info-libro a {
+    font-size: 0.8rem;
+    color: #1a4a72;
+    text-decoration: underline;
+}
+
+.btn-agregar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1a4a72;
+    /* Azul del wireframe */
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-login {
+    background-color: #1a4a72;
+    /* Azul oscuro del diseño */
+    color: #ffffff;
+    /* Texto en blanco */
+    border: none;
+    /* Quita el borde por defecto */
+    padding: 8px 18px;
+    /* Espacio interno para darle tamaño */
+    border-radius: 4px;
+    /* Bordes ligeramente redondeados */
+    font-weight: bold;
+    /* Texto en negrita */
+    cursor: pointer;
+    /* Cambia el cursor a mano al pasar por encima */
+}
+
+/* Opcional: Para que cambie levemente de color cuando le pases el mouse por encima */
+.btn-login:hover {
+    background-color: #133552;
+}
+
+.tarjeta {
+    flex: 1;
+    /* Obliga a que los 6 botones se distribuyan de extremo a extremo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    /* Añade la caja blanca */
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.btn-sumar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1a4a72;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-titulo {
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.logo-subtitulo {
+    font-size: 1.6rem;
+    color: #1a4a72;
+    /* El azul distintivo */
+    font-weight: bold;
+}
+
+.contador-libros {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #000000;
+}
+
+.texto-contador p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.linea-decorativa {
+    width: 40px;
+    height: 4px;
+    background-color: #1a4a72;
+    margin-bottom: 15px;
 }
 
